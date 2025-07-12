@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Color Change</title>
+    <style>
+        body {
+            transition: background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .red {
+            background-color: #e74c3c;
+        }
+
+        .yellow {
+            background-color: #f1c40f;
+            color: black;
+        }
+
+        .green {
+            background-color: #2ecc71;
+        }
+
+        .blue {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>background-Changer</h2>
+    <div class="boxes">
+        <button class="btn red">Red</button>
+        <button class="btn yellow">Yellow</button>
+        <button class="btn green">Green</button>
+        <button class="btn blue">Blue</button>
+    </div>
+
+    <script>
+        const boxes = document.querySelector(".boxes");
+
+        boxes.addEventListener("click", function (e) {
+            if (e.target.classList.contains("btn")) {
+                document.body.style.backgroundColor = e.target.textContent.toLowerCase();
+            }
+        });
+    </script>
+</body>
+
+</html>

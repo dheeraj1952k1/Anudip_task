@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishy Delight @Resturant</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #ff5733;
+            --bg-light: #f9f9f9;
+            --card-border: #ddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+        }
+
+        #header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            float: right;
+            margin-top: -50px;
+            margin-right: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        #menu-title {
+            text-align: center;
+            margin: 30px;
+            font-size: 2rem;
+        }
+
+        #card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 30px 50px;
+        }
+
+        .food-card {
+            background: white;
+            border: 1px solid var(--card-border);
+            width: 280px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .food-card:hover {
+            transform: scale(1.03);
+        }
+
+        .food-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 15px;
+        }
+
+        .food-info h3 {
+            margin: 10px 0 5px;
+            color: var(--primary-color);
+        }
+
+        .food-info p {
+            margin: 5px 0;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>Dishy Delight @Resturant</h1>
+        <nav>
+            <a href="#">Menu</a>
+            <a href="#">Popular Dishes</a>
+        </nav>
+    </div>
+
+    <div id="menu-title">Menu</div>
+
+    <div id="card-container">
+        <!-- Card 1 -->
+        <div class="food-card">
+            <img class="food-image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOQ4h-ZWSxbZIx5Xy8jUp4qppVsulj_RTiZg&s"
+                alt="Pizza Supreme">
+            <div class="food-info">
+                <h3>Pizza Supreme</h3>
+                <p>Pizza sauce, mozzarella, bacon, beef mince, capsicum, pepperoni, mushroom, olives</p>
+                <p class="price">Price: ₹250</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="food-card">
+            <img class="food-image"
+                src="https://www.indianhealthyrecipes.com/wp-content/uploads/2014/11/paneer-tikka-masala-recipe-1.jpg"
+                alt="Paneer Tikka">
+            <div class="food-info">
+                <h3>Paneer Tikka</h3>
+                <p>Paneer, yogurt, ground spices, bell peppers, onions, baby corn, mushrooms</p>
+                <p class="price">Price: ₹200</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="food-card">
+            <img class="food-image"
+                src="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/04/veg-biryani-recipe-500x500.jpg"
+                alt="Veg Biryani">
+            <div class="food-info">
+                <h3>Veg Biryani</h3>
+                <p>Basmati rice, vegetables, saffron, herbs, fried onions, raita on side</p>
+                <p class="price">Price: ₹180</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Glenary's Restaurant | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

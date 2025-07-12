@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            background: #eaeaea;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            background: #fff;
+            width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .wrapper h2 {
+            text-align: center;
+            color: #0000cc;
+            margin-bottom: 25px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        label {
+            font-size: 15px;
+            margin-top: 12px;
+            display: block;
+        }
+
+        .radio-set label,
+        .check-set label {
+            display: block;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+        textarea.form-control {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .center-btn button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .center-btn button:hover {
+            background-color: #0057b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Survey Form</h2>
+        <form>
+
+            <input class="form-control" type="text" placeholder="Enter your name" required>
+            <input class="form-control" type="email" placeholder="Enter your email" required>
+            <input class="form-control" type="number" placeholder="Enter your age" required>
+
+            <label for="type">Student</label>
+            <select id="type" class="form-control">
+                <option>Student</option>
+                <option>Teacher</option>
+                <option>Professional</option>
+            </select>
+
+            <label>Would you recommend this survey form to a friend?</label>
+            <div class="radio-set">
+                <label><input type="radio" name="recommend" value="yes"> Yes</label>
+                <label><input type="radio" name="recommend" value="no"> No</label>
+                <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+            </div>
+
+            <label>Languages and Frameworks known (check all that apply)</label>
+            <div class="check-set">
+                <label><input type="checkbox" name="lang" value="java"> Java</label>
+                <label><input type="checkbox" name="lang" value="python"> Python</label>
+                <label><input type="checkbox" name="lang" value="react"> React</label>
+                <label><input type="checkbox" name="lang" value="angular"> Angular</label>
+                <label><input type="checkbox" name="lang" value="spring"> Spring</label>
+            </div>
+
+            <label>Any comments or suggestions</label>
+            <textarea class="form-control" placeholder="Enter your comments here..."></textarea>
+
+            <div class="center-btn">
+                <button type="submit">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

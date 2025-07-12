@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    background: #eaeaea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resume-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    animation: fadeInCard 1.5s ease;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    animation: fadeInText 2s ease;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin: 4px 0;
+}
+
+.contact-info a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    color: #333;
+    border-left: 4px solid #007acc;
+    padding-left: 10px;
+    margin-top: 1.5rem;
+    animation: slideIn 1s ease-in-out;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #007acc;
+}
+
+a:hover {
+    color: #005a99;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeInText 1.2s ease forwards;
+}
+
+.slide-up {
+    animation: slideIn 1.2s ease forwards;
+}

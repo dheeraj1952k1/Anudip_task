@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Timer</title>
+</head>
+
+<body>
+
+    <h1 id="display">Hello World</h1>
+
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stopTimer()">Stop</button>
+
+    <script>
+        let count = 0;
+        let timer;
+
+        function startTimer() {
+            if (timer) return;
+
+            timer = setInterval(() => {
+                count++;
+                if (count <= 10) {
+                    document.getElementById("display").innerText = "Hello World => " + count;
+                    console.log(count);
+                } else {
+                    document.getElementById("display").innerText = "Time's Up!";
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+
+</body>
+
+</html>
