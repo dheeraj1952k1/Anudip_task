@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Background Color Changer</title>
     <style>
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin-top: 100px;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
         }
 
         h1 {
             color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
         }
 
         button {
-            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
             font-size: 16px;
-            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        #colorCode {
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        .color-code {
             margin-top: 20px;
+            font-size: 18px;
             font-weight: bold;
+            color: #222;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -31,18 +56,23 @@
 <body>
 
     <h1>Random Background Color Changer</h1>
-    <button onclick="changeColor()">Change Background Color</button>
-    <p id="colorCode">Current Color: #ffffff</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <div class="color-code" id="colorCode">Current Color: #ffffff</div>
 
     <script>
-        function changeColor() {
-            let letters = '0123456789ABCDEF';
-            let color = '#';
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
             for (let i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
-            document.body.style.backgroundColor = color;
-            document.getElementById("colorCode").textContent = "Current Color: " + color;
+            return color;
+        }
+
+        function changeBackgroundColor() {
+            const newColor = getRandomColor();
+            document.body.style.backgroundColor = newColor;
+            document.getElementById("colorCode").textContent = "Current Color: " + newColor;
         }
     </script>
 
